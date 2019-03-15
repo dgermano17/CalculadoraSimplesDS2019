@@ -20,14 +20,22 @@ public class CalculadoraSimples {
     
     
     public static void Resposta(double num1,double num2){
-        if (opr == "1"){
-            resp = Operacoes.somaValor(num1, num2);
-        }else if (opr == "2"){
-            resp = Operacoes.subtValor(num1, num2);
-        }else if (opr == "3"){
-            resp = Operacoes.multValor(num1, num2);
-        }else if (opr == "4"){
-            resp = Operacoes.divValor(num1, num2);
+        
+        switch (opr) {
+            case "1":
+                resp = Operacoes.somaValor(num1, num2);
+                break;
+            case "2":
+                resp = Operacoes.subtValor(num1, num2);
+                break;
+            case "3":
+                resp = Operacoes.multValor(num1, num2);
+                break;
+            case "4":
+                resp = Operacoes.divValor(num1, num2);
+                break;
+            default:
+                break;
         }
         JOptionPane.showMessageDialog(null, "Resultado: "+resp);
     }
